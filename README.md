@@ -1,7 +1,7 @@
 # Habit yourself
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-![Not Used](https://img.shields.io/badge/Framework-Not--Used-blue.svg)
+![Not Used](https://img.shields.io/badge/Framework-Not_Used-blue.svg)
 
 ## Overview
 
