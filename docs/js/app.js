@@ -80,7 +80,7 @@ const addRow = (habits, name) => {
     // Click the del button to delete that line.
     // Also delete it from habits and update habits.
     deleteCell.addEventListener("click", e => {
-        if (confirm(translate("confirmDelete"))) {
+        if (confirm(i18n.translate("confirmDelete"))) {
             const name = e.currentTarget.dataset.name;
             $$one(`tbody>tr[data-name='${name}']`).remove();
             const habits = Habit.removeByName(load(), name);
@@ -150,7 +150,7 @@ $$one("header button").addEventListener("click", e => {
         // Check if the name already exists.
         const habits = load();
         if (Habit.getNames(habits).includes(name)) {
-            alert(translate("dialogSameNameExists"));
+            alert(i18n.translate("dialogSameNameExists"));
             return;
         }
         // Add a row
