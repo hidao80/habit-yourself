@@ -8,6 +8,7 @@
  */
 :root {
     --table-back: lightblue;
+    --table-back-odd: #ACE6E1;
     --hover-back: skyblue;
     --checked-back: skyblue;
     --checked-text: navy;
@@ -83,7 +84,6 @@ tbody th:nth-child(1) {
   position: sticky;
   left: 0;
   z-index: 1000;
-  background-color: var(--table-back);
   border: 1px solid black !important;
 }
 
@@ -91,6 +91,26 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 1em;
+}
+
+thead > tr > th:first-child {
+    background-color: var(--table-back);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: var(--table-back);
+
+    > th:first-child {
+        background-color: var(--table-back);
+    }
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: var(--table-back-odd);
+
+    > th:first-child {
+        background-color: var(--table-back-odd);
+    }
 }
 
 tbody > tr {
