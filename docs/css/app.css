@@ -6,16 +6,39 @@
  * Define the colors used on the page.
  * I would like to adapt to the theme soon.
  */
+@media (prefers-color-scheme: light) {
+    :root {
+        --table-back: lightblue;
+        --table-back-odd: #ACE6E1;
+        --table-border-color: black;
+        --hover-back: skyblue;
+        --checked-back: skyblue;
+        --checked-text: navy;
+        --label-color: black;
+        --background-color: white;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --table-back: #2a2a2a;
+        --table-back-odd: #333333;
+        --table-border-color: lightgray;
+        --hover-back: #1e1e1e;
+        --checked-back: #37474f;
+        --checked-text: #cfd8dc;
+        --label-color: white;
+        --background-color: black;
+    }
+}
 :root {
-    --table-back: lightblue;
-    --table-back-odd: #ACE6E1;
-    --hover-back: skyblue;
-    --checked-back: skyblue;
-    --checked-text: navy;
     --sunday-text: red;
     --saturday-text: blue;
     --check-mark: "\e5ca";
     --add-mark: "\e145";
+}
+
+html {
+    background-color: var(--background-color);
 }
 
 /* Things specified by tag */
@@ -32,7 +55,7 @@ main {
     border: 2px solid black;
     border-radius: 15px;
     box-shadow: gray 10px 10px 10px;
-    color: black;
+    color: var(--label-color);
     min-height: 100px;
     /* z-index: 99999; */
     padding: 15px;
@@ -58,7 +81,7 @@ header {
 
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid var(--table-border-color);
     height: 3em;
     min-width: 3em;
 }
@@ -84,7 +107,7 @@ tbody th:nth-child(1) {
   position: sticky;
   left: 0;
   z-index: 1000;
-  border: 1px solid black !important;
+  border: 1px solid var(--table-border-color) !important;
 }
 
 table {
@@ -97,6 +120,7 @@ thead > tr > th:first-child {
     background-color: var(--table-back);
 }
 
+/* calendar row */
 tbody > tr:nth-child(even) {
     background-color: var(--table-back);
 
